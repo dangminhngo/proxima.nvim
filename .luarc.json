@@ -1,0 +1,9 @@
+{
+    "workspace.library": [
+        "/home/jaime/.local/share/nvim/site/pack/packer/start/neodev.nvim/types/stable",
+        "/usr/share/nvim/runtime/lua",
+        "/usr/share/awesome/lib",
+        "/home/jaime/repos/proxima.nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}

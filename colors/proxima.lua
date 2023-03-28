@@ -1,0 +1,1 @@
+require("proxima").colorscheme()
