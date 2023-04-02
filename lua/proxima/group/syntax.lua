@@ -58,22 +58,29 @@ function M.get(c, conf)
     qfLineNr = { link = "lineNr" },
     qfFileName = { link = "Directory" },
 
-    htmlH1       = { fg = pal.magenta, style = "bold" },
-    htmlH2       = { fg = pal.blue, style = "bold" },
+    htmlH1 = { fg = pal.magenta, style = "bold" },
+    htmlH2 = { fg = pal.blue, style = "bold" },
 
     -- mkdHeading            = {},
     -- mkdCode               = {},
-    mkdCodeDelimiter      = { fg = pal.fg1, bg = pal.black },
-    mkdCodeStart          = { fg = pal.teal, style = "bold" },
-    mkdCodeEnd            = { fg = pal.teal, style = "bold" },
+    mkdCodeDelimiter = { fg = pal.fg1, bg = pal.black },
+    mkdCodeStart = { fg = pal.teal, style = "bold" },
+    mkdCodeEnd = { fg = pal.teal, style = "bold" },
     -- mkdLink               = {},
 
     markdownHeadingDelimiter = { fg = pal.orange, style = "bold" },
-    markdownCode             = { fg = pal.teal },
-    markdownCodeBlock        = { fg = pal.teal },
-    markdownH1               = { fg = pal.magenta, style = "bold" },
-    markdownH2               = { fg = pal.blue, style = "bold" },
-    markdownLinkText         = { fg = pal.blue, style = "underline" },
+    markdownCode = { fg = pal.teal },
+    markdownCodeBlock = { fg = pal.teal },
+    markdownH1 = { fg = pal.magenta, style = "bold" },
+    markdownH2 = { fg = pal.blue, style = "bold" },
+    markdownLinkText = { fg = pal.blue, style = "underline" },
+
+    -- These groups are for the native LSP client. Some other LSP clients may
+    -- use these groups, or use their own. Consult your LSP client's
+    -- documentation.
+    LspReferenceText = { bg = pal.bg4 }, -- used for highlighting "text" references
+    LspReferenceRead = { bg = pal.bg4 }, -- used for highlighting "read" references
+    LspReferenceWrite = { bg = pal.bg4 }, -- used for highlighting "write" references
   }
 end
 

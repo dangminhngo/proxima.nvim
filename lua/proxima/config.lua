@@ -1,5 +1,5 @@
 local _config = {
-  accent = "green",
+  accent = "blue",
   options = {
     palettes = {},
     specs = {},

@@ -12,7 +12,7 @@ function M.get(c, config, opts)
     rainbowcol4 = { fg = pal.blue },
     rainbowcol5 = { fg = pal.cyan },
     rainbowcol6 = { fg = pal.magenta },
-    rainbowcol7 = { fg = pal.purple },
+    rainbowcol7 = { fg = pal.pink },
   }
 end
 
