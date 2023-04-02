@@ -5,7 +5,6 @@ local c = palette.load_colors(config.accent, config)
 local pal = c.palettes
 
 local function gen_mode(color)
-
   return {
     a = { bg = color, fg = pal.bg0, gui = "bold" },
     b = { bg = pal.dark, fg = pal.accent },
