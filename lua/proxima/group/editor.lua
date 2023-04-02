@@ -79,7 +79,7 @@ function M.get(c, conf)
     -- debugBreakpoint = {}, -- used for breakpoint colors in terminal-debug
 
     -- Diff
-    diffAdded = { fg = git.add },
+    diffAdded = { fg = git.added },
     diffRemoved = { fg = git.removed },
     diffChanged = { fg = git.changed },
     diffOldFile = { fg = diag.warn },

@@ -35,6 +35,7 @@ local _config = {
       lspsaga = true,
       lsp_signature = true,
       notify = true,
+      neotree = true,
       nvimtree = true,
       scrollbar = true,
       telescope = true,

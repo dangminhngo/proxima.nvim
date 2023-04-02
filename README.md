@@ -67,7 +67,7 @@ This is an example proxima setup with default values
 
 ```lua
 require("proxima").setup {
-  accent = "green", -- values: "orange", "teal", "white", "cyan", "green", "magenta", "purple", "red", "blue", "yellow"
+  accent = "blue", -- values: "orange", "teal", "white", "cyan", "green", "magenta", "purple", "red", "blue", "yellow"
   options = {
     transparent = false, -- if true, background is transparent
     terminal_colors = true, -- if true, set terminal colors
@@ -104,6 +104,7 @@ require("proxima").setup {
       lspsaga = true,
       lsp_signature = true,
       notify = true,
+      neotree = true,
       nvimtree = true,
       scrollbar = true,
       telescope = true,

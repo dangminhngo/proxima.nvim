@@ -24,8 +24,8 @@ function M.get(c, config, opts)
 
     NvimTreeGitDeleted = { fg = git.removed },
     NvimTreeGitDirty = { fg = git.changed },
-    NvimTreeGitMerge = { fg = git.confict },
-    NvimTreeGitNew = { fg = git.add },
+    NvimTreeGitMerge = { fg = git.conflict },
+    NvimTreeGitNew = { fg = git.added },
     NvimTreeGitRenamed = { link = "NvimTreeGitDeleted" },
     NvimTreeGitStaged = { link = "NvimTreeGitStaged" },
   }

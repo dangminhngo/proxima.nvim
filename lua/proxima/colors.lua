@@ -78,7 +78,7 @@ function M.generate(accent, config)
       hint = palettes.green,
     },
     git = {
-      add = palettes.cyan,
+      added = palettes.cyan,
       removed = palettes.red,
       changed = palettes.yellow,
       conflict = palettes.orange,
@@ -89,12 +89,12 @@ function M.generate(accent, config)
       delete = palettes.red,
       change = palettes.yellow,
       text = palettes.cyan,
-    }
+    },
   }
 
   return {
     palettes = vim.tbl_deep_extend("force", palettes, p),
-    specs = vim.tbl_deep_extend("force", specs, s)
+    specs = vim.tbl_deep_extend("force", specs, s),
   }
 end
 

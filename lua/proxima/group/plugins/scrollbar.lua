@@ -26,8 +26,8 @@ function M.get(c, config, opts)
     ScrollbarMiscHandle = { fg = pal.fg0, bg = pal.bg1 },
     ScrollbarMisc = { fg = pal.fg0, bg = pal.bg1 },
 
-    ScrollbarGitAddHandle = { fg = git.add, bg = pal.bg1 },
-    ScrollbarGitAdd = { fg = git.add, bg = pal.bg1 },
+    ScrollbarGitAddHandle = { fg = git.added, bg = pal.bg1 },
+    ScrollbarGitAdd = { fg = git.added, bg = pal.bg1 },
     ScrollbarGitChangeHandle = { fg = git.changed, bg = pal.bg1 },
     ScrollbarGitChange = { fg = git.changed, bg = pal.bg1 },
     ScrollbarGitDeleteHandle = { fg = git.removed, bg = pal.bg1 },
