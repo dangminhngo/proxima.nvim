@@ -8,21 +8,21 @@ local M = {}
 -- @param config table
 function M.generate(config)
   local bg = config.palettes.bg
+  local fg = config.palettes.fg
+
   local palettes = vim.tbl_deep_extend("keep", config.palettes, {
+    dark = color.darken(bg, 48),
     bg0 = color.darken(bg, 16),
-    bg1 = bg,
     bg2 = color.lighten(bg, 6),
     bg3 = color.lighten(bg, 12),
     bg4 = color.lighten(bg, 18),
-    fg0 = color.lighten(bg, 96),
-    fg1 = color.lighten(bg, 88),
-    fg2 = color.lighten(bg, 72),
-    fg3 = color.lighten(bg, 64),
-    fg4 = color.lighten(bg, 56),
-    dark = color.darken(bg, 32),
-    comment = color.lighten(bg, 40),
+    fg0 = color.lighten(fg, 16),
+    fg2 = color.darken(fg, 8),
+    fg3 = color.darken(fg, 16),
+    fg4 = color.darken(fg, 24),
+    comment = color.lighten(bg, 32),
     black = color.lighten(bg, 24),
-    white = color.lighten(bg, 96),
+    white = color.lighten(fg, 24),
   })
 
   palettes.accent = palettes[config.accent]
@@ -84,6 +84,9 @@ function M.generate(config)
       text = g(diff.text),
     },
   }
+
+  -- vim.pretty_print(palettes)
+  -- vim.pretty_print(specs)
 
   return {
     palettes = palettes,

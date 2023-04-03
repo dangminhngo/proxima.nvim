@@ -14,7 +14,7 @@ function M.get(c, config)
   return {
     ColorColumn = { bg = pal.bg2 }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = pal.bg4 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor = { fg = pal.bg1, bg = pal.fg1 }, -- character under the cursor
+    Cursor = { fg = pal.bg, bg = pal.fg }, -- character under the cursor
     lCursor = { link = "Cursor" }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { link = "Cursor" }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { link = "CursorLine" }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
@@ -24,7 +24,7 @@ function M.get(c, config)
     DiffChange = { fg = diff.change, bg = pal.bg0 }, -- diff mode: Changed line |diff.txt|
     DiffDelete = { fg = diff.delete, bg = pal.bg0 }, -- diff mode: Deleted line |diff.txt|
     DiffText = { fg = diff.text, bg = pal.bg0 }, -- diff mode: Changed text within a changed line |diff.txt|
-    EndOfBuffer = { fg = pal.bg1 }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+    EndOfBuffer = { fg = pal.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor      = {}, -- cursor in a focused terminal
     -- TermCursorNC    = {}, -- cursor in an unfocused terminal
     ErrorMsg = { fg = diag.error }, -- error messages on the command line
@@ -33,7 +33,7 @@ function M.get(c, config)
     FoldColumn = { fg = pal.fg3 }, -- 'foldcolumn'
     SignColumn = { fg = pal.fg3 }, -- column where |signs| are displayed
     SignColumnSB = { link = "SignColumn" }, -- column where |signs| are displayed
-    Substitute = { fg = pal.bg1, bg = diag.error }, -- |:substitute| replacement text highlighting
+    Substitute = { fg = pal.bg, bg = diag.error }, -- |:substitute| replacement text highlighting
     LineNr = { fg = pal.bg4 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = pal.accent, style = "bold" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = diag.warn, style = inv.match_paren and "inverse,bold" or "bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -43,12 +43,12 @@ function M.get(c, config)
     -- MsgSeparator    = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = diag.info, style = "bold" }, -- |more-prompt|
     NonText = { fg = pal.bg4 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal = { fg = pal.fg1, bg = trans and "NONE" or pal.bg1 }, -- normal text
-    NormalNC = { fg = pal.fg1, bg = trans and "NONE" or alt and pal.bg0 or pal.bg1 }, -- normal text in non-current windows
-    NormalFloat = { fg = pal.fg1, bg = pal.bg0 }, -- Normal text in floating windows.
+    Normal = { fg = pal.fg, bg = trans and "NONE" or pal.bg }, -- normal text
+    NormalNC = { fg = pal.fg, bg = trans and "NONE" or alt and pal.bg0 or pal.bg }, -- normal text in non-current windows
+    NormalFloat = { fg = pal.fg, bg = pal.bg0 }, -- Normal text in floating windows.
     FloatBorder = { fg = pal.fg3 }, -- TODO
     Pmenu = { fg = pal.fg2, bg = pal.bg3 }, -- Popup menu: normal item.
-    PmenuSel = { fg = pal.bg1, bg = pal.accent }, -- Popup menu: selected item.
+    PmenuSel = { fg = pal.bg, bg = pal.accent }, -- Popup menu: selected item.
     PmenuSbar = { link = "Pmenu" }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = pal.visual }, -- Popup menu: Thumb of the scrollbar.
     Question = { link = "MoreMsg" }, -- |hit-enter| prompt and yes/no questions
@@ -64,7 +64,7 @@ function M.get(c, config)
     StatusLineNC = { fg = pal.fg3, bg = pal.bg0 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = pal.fg3, bg = pal.bg2 }, -- tab pages line, not active tab page label
     TabLineFill = { bg = pal.bg0 }, -- tab pages line, where there are no labels
-    TabLineSel = { fg = pal.fg0, bg = pal.bg1 }, -- tab pages line, active tab page label
+    TabLineSel = { fg = pal.fg0, bg = pal.bg }, -- tab pages line, active tab page label
     Title = { fg = syn.func }, -- titles for output from ":set all", ":autocmd" etpal.
     Visual = inv.visual and { style = "inverse" } or { fg = pal.bg0, bg = pal.visual }, -- Visual mode selection
     VisualNOS = inv.visual and { style = "inverse" } or { link = "visual" }, -- Visual mode selection when vim is "Not Owning the Selection".

@@ -53,7 +53,7 @@ function M.get(c, conf)
     -- Ignore         = {}, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = diag.error }, -- (preferred) any erroneous construct
-    Todo = { fg = pal.bg1, bg = diag.info }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { fg = pal.bg, bg = diag.info }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     qfLineNr = { link = "lineNr" },
     qfFileName = { link = "Directory" },
@@ -63,7 +63,7 @@ function M.get(c, conf)
 
     -- mkdHeading            = {},
     -- mkdCode               = {},
-    mkdCodeDelimiter = { fg = pal.fg1, bg = pal.black },
+    mkdCodeDelimiter = { fg = pal.fg, bg = pal.black },
     mkdCodeStart = { fg = pal.teal, style = "bold" },
     mkdCodeEnd = { fg = pal.teal, style = "bold" },
     -- mkdLink               = {},

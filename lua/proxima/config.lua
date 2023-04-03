@@ -1,18 +1,19 @@
 local M = {}
 
 local defaults = {
-  accent = "blue",
+  accent = "green",
   palettes = {
-    bg = "#1f2830",
-    red = "#f36a6f",
-    green = "#8fd780",
-    yellow = "#e6dd90",
-    blue = "#62b1ff",
-    magenta = "#b28ff5",
-    cyan = "#5ddae2",
-    teal = "#4fd5b5",
-    orange = "#efaa6f",
-    pink = "#e67aca",
+    fg = "#ded7c8",
+    bg = "#293235",
+    red = "#e67e80",
+    green = "#a4c76f",
+    yellow = "#d1cc66",
+    blue = "#5fbde8",
+    magenta = "#a382d1",
+    cyan = "#73c9c5",
+    teal = "#58d699",
+    orange = "#de995d",
+    pink = "#d971c4",
   },
   specs = {
     syntax = {
@@ -41,7 +42,7 @@ local defaults = {
       string = "green", -- Strings
       delimiter = "teal", -- Tag delimiter
       type = "yellow", -- Types
-      variable = "fg1", -- Variables
+      variable = "fg", -- Variables
     },
     diag = {
       error = "red",

@@ -12,13 +12,11 @@ local function mode(color)
   }
 end
 
-local proxima = {
+return {
   normal = mode(pal.accent),
-  insert = mode(pal.green),
+  insert = mode(pal.yellow),
   command = mode(pal.magenta),
-  visual = mode(pal.yellow),
+  visual = mode(pal.blue),
   replace = mode(pal.red),
   inactive = mode(pal.fg3),
 }
-
-return proxima

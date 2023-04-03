@@ -7,7 +7,7 @@ function M.get(c, config, opts)
   local syn = c.specs.syntax
 
   return {
-    LspSignatureActiveParameter = { fg = pal.bg1, bg = syn.param },
+    LspSignatureActiveParameter = { fg = pal.bg, bg = syn.param },
   }
 end
 

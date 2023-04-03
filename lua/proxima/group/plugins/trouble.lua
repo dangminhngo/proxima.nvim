@@ -8,12 +8,12 @@ function M.get(c, config, opts)
   return {
     TroubleCount = { link = "CursorLineNr" },
     TroubleError = { link = "DiagnosticError" },
-    TroubleNormal = { fg = pal.fg1 },
+    TroubleNormal = { fg = pal.fg },
     TroubleTextInformation = { link = "DiagnosticInfo" },
     TroubleSignWarning = { link = "DiagnosticWarn" },
-    TroubleLocation = { fg = pal.fg1 },
+    TroubleLocation = { fg = pal.fg },
     TroubleWarning = { link = "DiagnosticWarn" },
-    TroublePreview = { fg = pal.fg1 },
+    TroublePreview = { fg = pal.fg },
     TroubleTextError = { link = "DiagnosticError" },
     TroubleSignInformation = { link = "DiagnosticInfo" },
     TroubleIndent = { fg = pal.bg2 },
@@ -22,13 +22,13 @@ function M.get(c, config, opts)
     TroubleSignOther = { fg = pal.fg3 },
     TroubleFoldIcon = { link = "CursorLineNr" },
     TroubleTextWarning = { link = "DiagnosticWarn" },
-    TroubleCode = { fg = pal.fg1 },
+    TroubleCode = { fg = pal.fg },
     TroubleInformation = { link = "DiagnosticInfo" },
     TroubleSignError = { link = "DiagnosticError" },
-    TroubleFile = { fg = pal.fg1 },
+    TroubleFile = { fg = pal.fg },
     TroubleHint = { link = "DiagnosticHint" },
     TroubleTextHint = { link = "DiagnosticHint" },
-    TroubleText = { fg = pal.fg1 },
+    TroubleText = { fg = pal.fg },
   }
 end
 

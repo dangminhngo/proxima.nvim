@@ -42,8 +42,8 @@ function M.set_terminal_colors(c)
     pal.white,
   }
 
-  vim.g.terminal_color_foreground = pal.fg1
-  vim.g.terminal_color_background = pal.bg1
+  vim.g.terminal_color_foreground = pal.fg
+  vim.g.terminal_color_background = pal.bg
 
   for i, color in ipairs(colors) do
     local n = "terminal_color_" .. i - 1

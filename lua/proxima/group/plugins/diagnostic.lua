@@ -15,10 +15,10 @@ function M.get(c, config, opts)
     DiagnosticSignInfo = { link = "DiagnosticInfo" },
     DiagnosticSignHint = { link = "DiagnosticHint" },
 
-    DiagnosticVirtualTextError = { fg = pal.bg1, bg = opts.background and diag.error or "NONE" },
-    DiagnosticVirtualTextWarn = { fg = pal.bg1, bg = opts.background and diag.warn or "NONE" },
-    DiagnosticVirtualTextInfo = { fg = pal.bg1, bg = opts.background and diag.info or "NONE" },
-    DiagnosticVirtualTextHint = { fg = pal.bg1, bg = opts.background and diag.hint or "NONE" },
+    DiagnosticVirtualTextError = { fg = pal.bg, bg = opts.background and diag.error or "NONE" },
+    DiagnosticVirtualTextWarn = { fg = pal.bg, bg = opts.background and diag.warn or "NONE" },
+    DiagnosticVirtualTextInfo = { fg = pal.bg, bg = opts.background and diag.info or "NONE" },
+    DiagnosticVirtualTextHint = { fg = pal.bg, bg = opts.background and diag.hint or "NONE" },
 
     DiagnosticUnderlineError = { style = "undercurl", sp = diag.error },
     DiagnosticUnderlineWarn = { style = "undercurl", sp = diag.warn },

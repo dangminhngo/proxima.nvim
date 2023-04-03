@@ -10,7 +10,7 @@ return {
       { pal.dark, pal.accent },
       { pal.accent, pal.dark },
     },
-    middle = { { pal.fg1, pal.dark } },
+    middle = { { pal.fg, pal.dark } },
     right = { { pal.dark, pal.accent }, { pal.accent, pal.dark } },
     error = { { pal.dark, pal.red } },
     warning = { { pal.dark, pal.yellow } },
@@ -25,14 +25,14 @@ return {
     left = { { pal.dark, pal.red }, { pal.red, pal.dark } },
   },
   inactive = {
-    left = { { pal.accent, pal.dark }, { pal.dark, pal.fg1 } },
+    left = { { pal.accent, pal.dark }, { pal.dark, pal.fg } },
     middle = { { pal.fg3, pal.dark } },
     right = { { pal.fg3, pal.dark }, { pal.dark, pal.bg4 } },
   },
   tabline = {
-    left = { { pal.dark, pal.bg4 }, { pal.dark, pal.bg1 } },
+    left = { { pal.dark, pal.bg4 }, { pal.dark, pal.bg } },
     middle = { { pal.fg3, pal.dark } },
     right = { { pal.fg3, pal.dark }, { pal.dark, pal.bg4 } },
-    tabsel = { { pal.accent, pal.fg1 }, { pal.dark, pal.bg4 } },
+    tabsel = { { pal.accent, pal.fg }, { pal.dark, pal.bg4 } },
   },
 }

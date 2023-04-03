@@ -7,10 +7,10 @@ function M.get(c, config, opts)
   local syn = c.specs.syntax
 
   return {
-    CmpDocumentation = { fg = pal.fg1, bg = pal.bg0 },
+    CmpDocumentation = { fg = pal.fg, bg = pal.bg0 },
     CmpDocumentationBorder = { fg = pal.bg4, bg = pal.bg0 },
 
-    CmpItemAbbr = { fg = pal.fg1 },
+    CmpItemAbbr = { fg = pal.fg },
     CmpItemAbbrDeprecated = { fg = syn.dep, style = "strikethrough" },
     CmpItemAbbrMatch = { fg = pal.accent },
     CmpItemAbbrMatchFuzzy = { fg = pal.accent },
