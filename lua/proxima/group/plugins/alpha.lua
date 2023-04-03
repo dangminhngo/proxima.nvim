@@ -10,8 +10,8 @@ function M.get(c, config, opts)
     AlphaShortcut = { fg = pal.orange },
     AlphaHeader = { fg = pal.accent },
     AlphaHeaderLabel = { fg = pal.orange },
-    AlphaFooter = { fg = c.accent, style = "italic" },
-    AlphaButtons = { fg = c.teal },
+    AlphaFooter = { fg = pal.accent, style = "italic" },
+    AlphaButtons = { fg = pal.teal },
   }
 end
 
