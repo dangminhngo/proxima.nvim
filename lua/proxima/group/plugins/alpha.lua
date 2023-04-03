@@ -7,11 +7,11 @@ function M.get(c, config, opts)
   local syn = c.specs.syntax
 
   return {
-    AlphaShortcut = { fg = pal.orange },
+    AlphaShortcut = { fg = pal.pink },
     AlphaHeader = { fg = pal.accent },
     AlphaHeaderLabel = { fg = pal.orange },
-    AlphaFooter = { fg = pal.accent, style = "italic" },
-    AlphaButtons = { fg = pal.teal },
+    AlphaFooter = { fg = pal.magenta, style = "italic" },
+    AlphaButtons = { fg = pal.green },
   }
 end
 
