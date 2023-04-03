@@ -8,14 +8,14 @@ function M.get(c, config, opts)
 
   return {
     CmpDocumentation = { fg = pal.fg1, bg = pal.bg0 },
-    CmpDocumentationBorder = { fg = pal.visual, bg = pal.bg0 },
+    CmpDocumentationBorder = { fg = pal.bg4, bg = pal.bg0 },
 
     CmpItemAbbr = { fg = pal.fg1 },
     CmpItemAbbrDeprecated = { fg = syn.dep, style = "strikethrough" },
-    CmpItemAbbrMatch = { fg = syn.func },
-    CmpItemAbbrMatchFuzzy = { fg = syn.func },
+    CmpItemAbbrMatch = { fg = pal.accent },
+    CmpItemAbbrMatchFuzzy = { fg = pal.accent },
 
-    CmpItemKindDefault = { fg = pal.fg2 },
+    CmpItemKindDefault = { fg = pal.fg3 },
     CmpItemMenu = { link = "Comment" },
 
     CmpItemKindKeyword = { link = "Identifier" },
