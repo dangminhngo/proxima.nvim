@@ -4,21 +4,21 @@ local palette = require("proxima.palette")
 local c = palette.load_colors(config)
 local pal = c.palettes
 
-local function gen_mode(color)
+local function mode(color)
   return {
     a = { bg = color, fg = pal.bg0, gui = "bold" },
-    b = { bg = pal.dark, fg = pal.accent },
+    b = { bg = pal.dark, fg = color },
     c = { bg = pal.dark, fg = pal.fg3 },
   }
 end
 
 local proxima = {
-  normal = gen_mode(pal.accent),
-  insert = gen_mode(pal.green),
-  command = gen_mode(pal.magenta),
-  visual = gen_mode(pal.yellow),
-  replace = gen_mode(pal.red),
-  inactive = gen_mode(pal.fg3),
+  normal = mode(pal.accent),
+  insert = mode(pal.green),
+  command = mode(pal.magenta),
+  visual = mode(pal.yellow),
+  replace = mode(pal.red),
+  inactive = mode(pal.fg3),
 }
 
 return proxima

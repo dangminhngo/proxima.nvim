@@ -14,7 +14,7 @@ function M.get(c, config, opts)
     NeoTreeIndentMarker = { fg = pal.bg4 },
     NeoTreeTitleBar = { fg = pal.bg1, bg = pal.accent },
 
-    NeoTreeDimText = { pal.fg3 },
+    NeoTreeDimText = { fg = pal.fg3 },
     NeoTreeRootName = { fg = pal.accent, style = "bold" },
     NeoTreeDirectoryName = { fg = pal.fg2 },
     NeoTreeDirectoryIcon = { fg = pal.accent },
