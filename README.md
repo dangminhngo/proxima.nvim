@@ -119,10 +119,12 @@ require("proxima").setup {
 
 ## Supported Plugins
 
+- [barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [dashboard-nvim](https://github.com/glepnir/dashboard-nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [vim-illuminate](https://github.com/RRethy/vim-illuminate)
+- [lightline](https://github.com/itchyny/lightline.vim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
 - [lsp_signature.nvim](https://github.com/ray-x/lsp_signature)

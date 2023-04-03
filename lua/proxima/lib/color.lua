@@ -4,7 +4,7 @@ local _color = {}
 --- Convert hex to rgb
 -- @param color string HEX
 -- @return table
-_color.to_rgb = function (clr)
+_color.to_rgb = function(clr)
   local hex = "[abcdef0-9][abcdef0-9]"
   local pat = "^#(" .. hex .. ")(" .. hex .. ")(" .. hex .. ")$"
   clr = string.lower(clr)
@@ -21,7 +21,7 @@ end
 --- Convert hex to hsl
 -- @param color string HEX
 -- @return table
-_color.to_hsl = function (clr)
+_color.to_hsl = function(clr)
   local rgb = _color.to_rgb(clr)
   local r = rgb.r / 255
   local g = rgb.g / 255
@@ -59,7 +59,7 @@ _color.to_hsl = function (clr)
   }
 end
 
-_color.from_hsl = function (clr)
+_color.from_hsl = function(clr)
   local h = clr.h
   local s = clr.s
   local l = clr.l
@@ -109,7 +109,7 @@ end
 -- @param color2 string HEX
 -- @param factor number Float
 -- @return string HEX
-_color.blend = function (clr1, clr2, factor)
+_color.blend = function(clr1, clr2, factor)
   clr1 = _color.to_rgb(clr1)
   clr2 = _color.to_rgb(clr2)
 
@@ -125,7 +125,7 @@ end
 --- Darken a color
 -- @param color string HEX
 -- @return string HEX
-_color.darken = function (clr, lpt)
+_color.darken = function(clr, lpt)
   local hsl = _color.to_hsl(clr)
   local l = util.clamp(hsl.l - util.round((hsl.l / 100) * lpt), 0, 100)
   return _color.from_hsl({ h = hsl.h, s = hsl.s, l = l })
@@ -134,7 +134,7 @@ end
 --- Lighten a color
 -- @param color string HEX
 -- @return string HEX
-_color.lighten = function (clr, lpt)
+_color.lighten = function(clr, lpt)
   local hsl = _color.to_hsl(clr)
   local l = util.clamp(hsl.l + util.round(((100 - hsl.l) / 100) * lpt), 0, 100)
   return _color.from_hsl({ h = hsl.h, s = hsl.s, l = l })

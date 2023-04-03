@@ -78,8 +78,8 @@ function M.get(c, conf)
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
     -- documentation.
-    LspReferenceText = { bg = pal.bg4 }, -- used for highlighting "text" references
-    LspReferenceRead = { bg = pal.bg4 }, -- used for highlighting "read" references
+    LspReferenceText = { bg = pal.bg3 }, -- used for highlighting "text" references
+    LspReferenceRead = { bg = pal.bg3 }, -- used for highlighting "read" references
     LspReferenceWrite = { bg = pal.bg4 }, -- used for highlighting "write" references
   }
 end

@@ -10,19 +10,13 @@ function M.get_highlights(c, config)
   for plug, opts in pairs(conf.plugins or {}) do
     if type(opts) == "table" then
       if opts.enable then
-        highlights = vim.tbl_deep_extend(
-          "force",
-          highlights,
-          require("proxima.group.plugins." .. plug).get(c, conf, opts)
-        )
+        highlights =
+          vim.tbl_deep_extend("force", highlights, require("proxima.group.plugins." .. plug).get(c, conf, opts))
       end
     else
       if opts then
-        highlights = vim.tbl_deep_extend(
-          "force",
-          highlights,
-          require("proxima.group.plugins." .. plug).get(c, conf, {})
-        )
+        highlights =
+          vim.tbl_deep_extend("force", highlights, require("proxima.group.plugins." .. plug).get(c, conf, {}))
       end
     end
   end

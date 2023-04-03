@@ -14,9 +14,9 @@ end
 
 local proxima = {
   normal = gen_mode(pal.accent),
-  insert = gen_mode(pal.yellow),
-  command = gen_mode(pal.purple),
-  visual = gen_mode(pal.magenta),
+  insert = gen_mode(pal.green),
+  command = gen_mode(pal.magenta),
+  visual = gen_mode(pal.yellow),
   replace = gen_mode(pal.red),
   inactive = gen_mode(pal.fg3),
 }
