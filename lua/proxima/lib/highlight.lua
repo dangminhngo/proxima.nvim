@@ -1,4 +1,4 @@
-local _highlight = {}
+local M = {}
 
 local function validate(input)
   return input and input or "NONE"
@@ -20,7 +20,7 @@ end
 --- Set terminal colors
 -- @param c
 -- @param conf
-function _highlight.set_terminal_colors(c)
+function M.set_terminal_colors(c)
   local pal = c.palettes
 
   local colors = {
@@ -58,7 +58,7 @@ end
 --- Legacy highlight commands for NeoVim 0.6 and earlier
 -- @param c table
 -- @param hls table
-function _highlight.vim_hl(hls)
+function M.vim_hl(hls)
   if vim.g.colors_name then
     vim.cmd("hi clear")
   end
@@ -87,7 +87,7 @@ end
 --- Highlight commands for NeoVim 0.7+
 -- @param c table
 -- @param hls table
-function _highlight.nvim_hl(hls)
+function M.nvim_hl(hls)
   vim.o.termguicolors = true
   vim.g.colors_name = "proxima"
   vim.o.background = "dark"
@@ -112,9 +112,9 @@ function _highlight.nvim_hl(hls)
 end
 
 if vim.fn.has("nvim-0.7") then
-  _highlight.hl = _highlight.nvim_hl
+  M.hl = M.nvim_hl
 else
-  _highlight.hl = _highlight.vim_hl
+  M.hl = M.vim_hl
 end
 
-return _highlight
+return M

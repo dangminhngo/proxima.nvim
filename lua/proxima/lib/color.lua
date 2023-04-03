@@ -1,10 +1,10 @@
 local util = require("proxima.util")
-local _color = {}
+local M = {}
 
 --- Convert hex to rgb
 -- @param color string HEX
 -- @return table
-_color.to_rgb = function(clr)
+M.to_rgb = function(clr)
   local hex = "[abcdef0-9][abcdef0-9]"
   local pat = "^#(" .. hex .. ")(" .. hex .. ")(" .. hex .. ")$"
   clr = string.lower(clr)
@@ -21,8 +21,8 @@ end
 --- Convert hex to hsl
 -- @param color string HEX
 -- @return table
-_color.to_hsl = function(clr)
-  local rgb = _color.to_rgb(clr)
+M.to_hsl = function(clr)
+  local rgb = M.to_rgb(clr)
   local r = rgb.r / 255
   local g = rgb.g / 255
   local b = rgb.b / 255
@@ -59,7 +59,7 @@ _color.to_hsl = function(clr)
   }
 end
 
-_color.from_hsl = function(clr)
+M.from_hsl = function(clr)
   local h = clr.h
   local s = clr.s
   local l = clr.l
@@ -109,9 +109,9 @@ end
 -- @param color2 string HEX
 -- @param factor number Float
 -- @return string HEX
-_color.blend = function(clr1, clr2, factor)
-  clr1 = _color.to_rgb(clr1)
-  clr2 = _color.to_rgb(clr2)
+M.blend = function(clr1, clr2, factor)
+  clr1 = M.to_rgb(clr1)
+  clr2 = M.to_rgb(clr2)
 
   -- Get value of each channel
   local bc = function(c)
@@ -125,19 +125,19 @@ end
 --- Darken a color
 -- @param color string HEX
 -- @return string HEX
-_color.darken = function(clr, lpt)
-  local hsl = _color.to_hsl(clr)
+M.darken = function(clr, lpt)
+  local hsl = M.to_hsl(clr)
   local l = util.clamp(hsl.l - util.round((hsl.l / 100) * lpt), 0, 100)
-  return _color.from_hsl({ h = hsl.h, s = hsl.s, l = l })
+  return M.from_hsl({ h = hsl.h, s = hsl.s, l = l })
 end
 
 --- Lighten a color
 -- @param color string HEX
 -- @return string HEX
-_color.lighten = function(clr, lpt)
-  local hsl = _color.to_hsl(clr)
+M.lighten = function(clr, lpt)
+  local hsl = M.to_hsl(clr)
   local l = util.clamp(hsl.l + util.round(((100 - hsl.l) / 100) * lpt), 0, 100)
-  return _color.from_hsl({ h = hsl.h, s = hsl.s, l = l })
+  return M.from_hsl({ h = hsl.h, s = hsl.s, l = l })
 end
 
-return _color
+return M

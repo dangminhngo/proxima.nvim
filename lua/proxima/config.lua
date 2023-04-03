@@ -63,6 +63,7 @@ local defaults = {
       text = "cyan",
     },
   },
+  group = {},
   transparent = false,
   terminal_colors = true,
   styles = {

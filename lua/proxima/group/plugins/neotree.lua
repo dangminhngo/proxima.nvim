@@ -7,9 +7,12 @@ function M.get(c, config, opts)
   local git = c.specs.git
 
   return {
+    NeoTreeExpander = { fg = pal.bg4 },
     NeoTreeNormal = { fg = pal.fg2, bg = config.transparent and "NONE" or pal.bg0 },
+    NeoTreeNormalNC = { fg = pal.fg2, bg = config.transparent and "NONE" or pal.bg0 },
     NeoTreeVertSplit = { link = "VertSplit" },
     NeoTreeIndentMarker = { fg = pal.bg4 },
+    NeoTreeTitleBar = { fg = pal.bg1, bg = pal.accent },
 
     NeoTreeDimText = { pal.fg3 },
     NeoTreeRootName = { fg = pal.accent, style = "bold" },

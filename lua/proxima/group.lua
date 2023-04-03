@@ -19,7 +19,7 @@ function M.get_highlights(c, config)
       end
     end
   end
-  return highlights
+  return vim.tbl_deep_extend("force", highlights, config.groups or {})
 end
 
 return M
