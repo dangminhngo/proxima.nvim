@@ -2,17 +2,12 @@ local color = require("proxima.lib.color")
 
 local M = {}
 
-local default_bg = "#1f2830"
-
 --- Generate colors
 -- @param accent string
 -- @param config table
 function M.generate(config)
-  local p = config.palettes
-  local s = config.specs
-  local bg = p.bg or default_bg
-
-  local palettes = {
+  local bg = config.palettes.bg
+  local palettes = vim.tbl_deep_extend("keep", config.palettes, {
     bg0 = color.darken(bg, 16),
     bg1 = bg,
     bg2 = color.lighten(bg, 6),
@@ -27,74 +22,70 @@ function M.generate(config)
     comment = color.lighten(bg, 40),
     black = color.lighten(bg, 24),
     white = color.lighten(bg, 96),
-    red = "#f36a6f",
-    green = "#8fd780",
-    yellow = "#e6dd90",
-    blue = "#62b1ff",
-    magenta = "#b28ff5",
-    cyan = "#5ddae2",
-    teal = "#4fd5b5",
-    orange = "#efaa6f",
-    pink = "#e67aca",
-  }
+  })
 
   palettes.accent = palettes[config.accent]
   palettes.visual = color.lighten(palettes[config.accent], 64)
   palettes.search = color.darken(palettes[config.accent], 32)
 
+  local syn = config.specs.syntax
+  local diag = config.specs.diag
+  local git = config.specs.git
+  local diff = config.specs.diff
+
   local specs = {
     syntax = {
-      attr = palettes.yellow, -- HTML tag attribues
-      bool = palettes.orange, -- Boolean
-      bracket = palettes.fg2, -- Brackets and Punctuation
-      builtin0 = palettes.red, -- Builtin variable
-      builtin1 = palettes.yellow, -- Builtin type
-      builtin2 = palettes.orange, -- Builtin const
-      builtin3 = palettes.red, -- For keywords: return, constructor
-      comment = palettes.comment, -- Comment
-      conditional = palettes.pink, -- Conditional and loop
-      const = palettes.orange, -- Constants, imports and booleans
-      constructor = palettes.red, -- Constructor, JSX elements
-      dep = palettes.black, -- Deprecated
-      field = palettes.teal, -- Field, Property
-      func = palettes.blue, -- Functions and Titles
-      ident = palettes.pink, -- Identifiers
-      keyword = palettes.magenta, -- Keywords
-      number = palettes.orange, -- Numbers
-      operator = palettes.magenta, -- Operators
-      param = palettes.red, -- Params
-      preproc = palettes.magenta, -- PreProc
-      regex = palettes.orange, -- Regex
-      statement = palettes.magenta, -- Statements
-      string = palettes.green, -- Strings
-      delimiter = palettes.teal, -- Tag delimiter
-      type = palettes.yellow, -- Types
-      variable = palettes.fg1, -- Variables
+      attr = palettes[syn.attr], -- HTML tag attribues
+      bool = palettes[syn.bool], -- Boolean
+      bracket = palettes[syn.bracket], -- Brackets and Punctuation
+      builtin0 = palettes[syn.builtin0], -- Builtin variable
+      builtin1 = palettes[syn.builtin1], -- Builtin type
+      builtin2 = palettes[syn.builtin2], -- Builtin const
+      builtin3 = palettes[syn.builtin3], -- For keywords: return, constructor
+      comment = palettes[syn.comment], -- Comment
+      conditional = palettes[syn.conditional], -- Conditional and loop
+      const = palettes[syn.const], -- Constants, imports and booleans
+      constructor = palettes[syn.constructor], -- Constructor, JSX elements
+      dep = palettes[syn.dep], -- Deprecated
+      field = palettes[syn.field], -- Field, Property
+      func = palettes[syn.func], -- Functions and Titles
+      ident = palettes[syn.ident], -- Identifiers
+      keyword = palettes[syn.keyword], -- Keywords
+      number = palettes[syn.number], -- Numbers
+      operator = palettes[syn.operator], -- Operators
+      param = palettes[syn.param], -- Params
+      preproc = palettes[syn.preproc], -- PreProc
+      regex = palettes[syn.regex], -- Regex
+      statement = palettes[syn.statement], -- Statements
+      string = palettes[syn.string], -- Strings
+      delimiter = palettes[syn.delimiter], -- Tag delimiter
+      type = palettes[syn.type], -- Types
+      variable = palettes[syn.variable], -- Variables
     },
     diag = {
-      error = palettes.red,
-      warn = palettes.yellow,
-      info = palettes.cyan,
-      hint = palettes.green,
+      error = palettes[diag.error],
+      warn = palettes[diag.warn],
+      info = palettes[diag.info],
+      hint = palettes[diag.hint],
     },
     git = {
-      added = palettes.cyan,
-      removed = palettes.red,
-      changed = palettes.yellow,
-      conflict = palettes.orange,
-      ignored = palettes.comment,
+      added = palettes[git.added],
+      removed = palettes[git.removed],
+      changed = palettes[git.changed],
+      conflict = palettes[git.conflict],
+      ignored = palettes[git.ignored],
     },
     diff = {
-      add = palettes.green,
-      delete = palettes.red,
-      change = palettes.yellow,
-      text = palettes.cyan,
+      add = palettes[diff.add],
+      delete = palettes[diff.delete],
+      change = palettes[diff.change],
+      text = palettes[diff.text],
     },
   }
 
   return {
-    palettes = vim.tbl_deep_extend("force", palettes, p),
-    specs = vim.tbl_deep_extend("force", specs, s),
+    palettes = palettes,
+    specs = specs,
   }
 end
 
