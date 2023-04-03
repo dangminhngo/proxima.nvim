@@ -92,6 +92,7 @@ require("proxima").setup {
     },
     -- enable plugin highlightings
     plugins = {
+      alpha = true,
       bufferline = true,
       cmp = true,
       dashboard = true,

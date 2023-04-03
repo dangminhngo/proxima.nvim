@@ -23,6 +23,7 @@ local _config = {
       search = false,
     },
     plugins = {
+      alpha = true,
       bufferline = true,
       cmp = true,
       dashboard = true,
