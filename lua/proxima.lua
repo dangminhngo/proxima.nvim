@@ -5,19 +5,20 @@ local highlight = require("proxima.lib.highlight")
 local M = {}
 
 function M.colorscheme()
-  local config = require("proxima.config")
-  local colors = palette.load_colors(config.accent, config)
+  local config = require("proxima.config").config
+  -- vim.pretty_print(config)
+  local colors = palette.load_colors(config)
   local hls = group.get_highlights(colors, config)
   highlight.hl(hls)
 
-  if config.options.terminal_colors then
+  if config.terminal_colors then
     highlight.set_terminal_colors(colors)
   end
 end
 
-function M.setup(user_conf)
+function M.setup(options)
   local config = require("proxima.config")
-  config.set_config(user_conf)
+  config.setup(options)
 end
 
 return M

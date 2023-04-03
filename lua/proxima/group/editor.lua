@@ -1,9 +1,9 @@
 local M = {}
 
-function M.get(c, conf)
-  local trans = conf.transparent
-  local inv = conf.inverse
-  local alt = conf.alt
+function M.get(c, config)
+  local trans = config.transparent
+  local inv = config.inverse
+  local alt = config.alt
 
   local pal = c.palettes
   local syn = c.specs.syntax

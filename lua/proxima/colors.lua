@@ -7,9 +7,9 @@ local default_bg = "#1f2830"
 --- Generate colors
 -- @param accent string
 -- @param config table
-function M.generate(accent, config)
-  local p = config.options.palettes
-  local s = config.options.specs
+function M.generate(config)
+  local p = config.palettes
+  local s = config.specs
   local bg = p.bg or default_bg
 
   local palettes = {
@@ -38,9 +38,9 @@ function M.generate(accent, config)
     pink = "#e67aca",
   }
 
-  palettes.accent = palettes[accent]
-  palettes.visual = color.lighten(palettes[accent], 64)
-  palettes.search = color.darken(palettes[accent], 32)
+  palettes.accent = palettes[config.accent]
+  palettes.visual = color.lighten(palettes[config.accent], 64)
+  palettes.search = color.darken(palettes[config.accent], 32)
 
   local specs = {
     syntax = {

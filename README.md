@@ -68,53 +68,53 @@ This is an example proxima setup with default values
 ```lua
 require("proxima").setup {
   accent = "blue", -- values: "orange", "teal", "white", "cyan", "green", "magenta", "purple", "red", "blue", "yellow"
-  options = {
-    transparent = false, -- if true, background is transparent
-    terminal_colors = true, -- if true, set terminal colors
-    -- set style: "NONE", "italic", "bold", "underline", "undercurl"
-    styles = {
-      attributes = "NONE",
-      booleans = "NONE",
-      comments = "NONE",
-      functions = "NONE",
-      keywords = "NONE",
-      numbers = "NONE",
-      parameters = "NONE",
-      strings = "NONE",
-      types = "NONE",
-      variables = "NONE",
+  transparent = false, -- if true, background is transparent
+  terminal_colors = true, -- if true, set terminal colors
+  -- set style: "NONE", "italic", "bold", "underline", "undercurl"
+  palettes = {}, -- customize your own palettes
+  specs = {}, -- customize your own specs
+  styles = {
+    attributes = "NONE",
+    booleans = "NONE",
+    comments = "NONE",
+    functions = "NONE",
+    keywords = "NONE",
+    numbers = "NONE",
+    parameters = "NONE",
+    strings = "NONE",
+    types = "NONE",
+    variables = "NONE",
+  },
+  -- set invert colors
+  inverse = {
+    match_paren = false,
+    visual = false,
+    search = false,
+  },
+  -- enable plugin highlightings
+  plugins = {
+    alpha = true,
+    bufferline = true,
+    cmp = true,
+    dashboard = true,
+    diagnostic = {
+      enable = true,
+      background = true,
     },
-    -- set invert colors
-    inverse = {
-      match_paren = false,
-      visual = false,
-      search = false,
-    },
-    -- enable plugin highlightings
-    plugins = {
-      alpha = true,
-      bufferline = true,
-      cmp = true,
-      dashboard = true,
-      diagnostic = {
-        enable = true,
-        background = true,
-      },
-      gitsigns = true,
-      illuminate = true,
-      lspsaga = true,
-      lsp_signature = true,
-      notify = true,
-      neotree = true,
-      nvimtree = true,
-      scrollbar = true,
-      telescope = true,
-      treesitter = true,
-      trouble = true,
-      tsrainbow = true,
-      whichkey = true,
-    },
-  }
+    gitsigns = true,
+    illuminate = true,
+    lspsaga = true,
+    lsp_signature = true,
+    notify = true,
+    neotree = true,
+    nvimtree = true,
+    scrollbar = true,
+    telescope = true,
+    treesitter = true,
+    trouble = true,
+    tsrainbow = true,
+    whichkey = true,
+  },
 }
 ```
 

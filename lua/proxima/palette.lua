@@ -1,9 +1,8 @@
 local M = {}
 
-function M.load_colors(accent, config)
-  accent = accent or "teal"
+function M.load_colors(config)
   local colors = require("proxima.colors")
-  return colors.generate(accent, config)
+  return colors.generate(config)
 end
 
 return M
