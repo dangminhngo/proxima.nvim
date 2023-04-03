@@ -1,7 +1,7 @@
 local config = require("proxima.config")
 local palette = require("proxima.palette")
 
-local c = palette.load_colors(config.accent, config)
+local c = palette.load_colors(config)
 local pal = c.palettes
 local diag = c.specs.diag
 
