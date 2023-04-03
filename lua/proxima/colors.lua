@@ -1,4 +1,5 @@
 local color = require("proxima.lib.color")
+local util = require("proxima.util")
 
 local M = {}
 
@@ -25,61 +26,62 @@ function M.generate(config)
   })
 
   palettes.accent = palettes[config.accent]
-  palettes.visual = color.lighten(palettes[config.accent], 64)
-  palettes.search = color.darken(palettes[config.accent], 32)
+  palettes.visual = color.lighten(palettes.accent, 64)
+  palettes.search = color.darken(palettes.accent, 32)
 
   local syn = config.specs.syntax
   local diag = config.specs.diag
   local git = config.specs.git
   local diff = config.specs.diff
 
+  local g = util.get_color(palettes)
   local specs = {
     syntax = {
-      attr = palettes[syn.attr], -- HTML tag attribues
-      bool = palettes[syn.bool], -- Boolean
-      bracket = palettes[syn.bracket], -- Brackets and Punctuation
-      builtin0 = palettes[syn.builtin0], -- Builtin variable
-      builtin1 = palettes[syn.builtin1], -- Builtin type
-      builtin2 = palettes[syn.builtin2], -- Builtin const
-      builtin3 = palettes[syn.builtin3], -- For keywords: return, constructor
-      comment = palettes[syn.comment], -- Comment
-      conditional = palettes[syn.conditional], -- Conditional and loop
-      const = palettes[syn.const], -- Constants, imports and booleans
-      constructor = palettes[syn.constructor], -- Constructor, JSX elements
-      dep = palettes[syn.dep], -- Deprecated
-      field = palettes[syn.field], -- Field, Property
-      func = palettes[syn.func], -- Functions and Titles
-      ident = palettes[syn.ident], -- Identifiers
-      keyword = palettes[syn.keyword], -- Keywords
-      number = palettes[syn.number], -- Numbers
-      operator = palettes[syn.operator], -- Operators
-      param = palettes[syn.param], -- Params
-      preproc = palettes[syn.preproc], -- PreProc
-      regex = palettes[syn.regex], -- Regex
-      statement = palettes[syn.statement], -- Statements
-      string = palettes[syn.string], -- Strings
-      delimiter = palettes[syn.delimiter], -- Tag delimiter
-      type = palettes[syn.type], -- Types
-      variable = palettes[syn.variable], -- Variables
+      attr = g(syn.attr), -- HTML tag attribues
+      bool = g(syn.bool), -- Boolean
+      bracket = g(syn.bracket), -- Brackets and Punctuation
+      builtin0 = g(syn.builtin0), -- Builtin variable
+      builtin1 = g(syn.builtin1), -- Builtin type
+      builtin2 = g(syn.builtin2), -- Builtin const
+      builtin3 = g(syn.builtin3), -- For keywords: return, constructor
+      comment = g(syn.comment), -- Comment
+      conditional = g(syn.conditional), -- Conditional and loop
+      const = g(syn.const), -- Constants, imports and booleans
+      constructor = g(syn.constructor), -- Constructor, JSX elements
+      dep = g(syn.dep), -- Deprecated
+      field = g(syn.field), -- Field, Property
+      func = g(syn.func), -- Functions and Titles
+      ident = g(syn.ident), -- Identifiers
+      keyword = g(syn.keyword), -- Keywords
+      number = g(syn.number), -- Numbers
+      operator = g(syn.operator), -- Operators
+      param = g(syn.param), -- Params
+      preproc = g(syn.preproc), -- PreProc
+      regex = g(syn.regex), -- Regex
+      statement = g(syn.statement), -- Statements
+      string = g(syn.string), -- Strings
+      delimiter = g(syn.delimiter), -- Tag delimiter
+      type = g(syn.type), -- Types
+      variable = g(syn.variable), -- Variables
     },
     diag = {
-      error = palettes[diag.error],
-      warn = palettes[diag.warn],
-      info = palettes[diag.info],
-      hint = palettes[diag.hint],
+      error = g(diag.error),
+      warn = g(diag.warn),
+      info = g(diag.info),
+      hint = g(diag.hint),
     },
     git = {
-      added = palettes[git.added],
-      removed = palettes[git.removed],
-      changed = palettes[git.changed],
-      conflict = palettes[git.conflict],
-      ignored = palettes[git.ignored],
+      added = g(git.added),
+      removed = g(git.removed),
+      changed = g(git.changed),
+      conflict = g(git.conflict),
+      ignored = g(git.ignored),
     },
     diff = {
-      add = palettes[diff.add],
-      delete = palettes[diff.delete],
-      change = palettes[diff.change],
-      text = palettes[diff.text],
+      add = g(diff.add),
+      delete = g(diff.delete),
+      change = g(diff.change),
+      text = g(diff.text),
     },
   }
 

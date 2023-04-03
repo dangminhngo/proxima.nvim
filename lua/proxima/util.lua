@@ -15,4 +15,27 @@ function M.clamp(value, min, max)
   return math.min(math.max(value, min), max)
 end
 
+---Return true if color is hex, false if color from palettes
+-- @param clr string
+function M.is_hex_color(clr)
+  local result, _ = string.find(clr, "#")
+  if result == 1 then
+    return true
+  end
+
+  return false
+end
+
+--Return the color code
+-- @param clr string
+-- @param fallback string
+function M.get_color(palettes)
+  return function(clr)
+    if M.is_hex_color(clr) then
+      return clr
+    end
+    return palettes[clr]
+  end
+end
+
 return M
