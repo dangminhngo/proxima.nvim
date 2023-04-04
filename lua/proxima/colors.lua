@@ -11,18 +11,18 @@ function M.generate(config)
   local fg = config.palettes.fg
 
   local palettes = vim.tbl_deep_extend("keep", config.palettes, {
-    dark = color.darken(bg, 48),
+    dark = color.darken(bg, 32),
     bg0 = color.darken(bg, 16),
     bg2 = color.lighten(bg, 4),
     bg3 = color.lighten(bg, 8),
     bg4 = color.lighten(bg, 12),
-    fg0 = color.lighten(fg, 16),
-    fg2 = color.darken(fg, 8),
-    fg3 = color.darken(fg, 16),
-    fg4 = color.darken(fg, 24),
+    fg0 = color.lighten(fg, 56),
+    fg2 = color.darken(fg, 16),
+    fg3 = color.darken(fg, 32),
+    fg4 = color.darken(fg, 48),
     comment = color.lighten(bg, 24),
     black = color.lighten(bg, 18),
-    white = color.lighten(fg, 24),
+    white = color.lighten(fg, 64),
   })
 
   palettes.accent = palettes[config.accent]
