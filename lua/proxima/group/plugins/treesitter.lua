@@ -23,7 +23,7 @@ function M.fallback(c, config, opts)
     -- HTML/JSX attributes
     ["attribute"] = {
       "TSAttribute",
-      { fg = syn.attr, style = stl.attributes },
+      { fg = syn.attr, style = stl.attribute },
     },
     -- Boolean literals: `True` and `False` in Python.
     ["boolean"] = {
@@ -58,7 +58,7 @@ function M.fallback(c, config, opts)
     -- Built-in constant values: `nil` in Lua.
     ["constant.builtin"] = {
       "TSConstBuiltin",
-      { fg = syn.builtin2, style = stl.constants },
+      { fg = syn.builtin2, style = stl.constant },
     },
     -- Constants defined by macros: `NULL` in C.
     ["constant.macro"] = {
@@ -113,12 +113,12 @@ function M.fallback(c, config, opts)
     -- Built-in functions: `print` in Lua.
     ["function.builtin"] = {
       "TSFuncBuiltin",
-      { fg = syn.builtin0, style = stl.functions },
+      { fg = syn.builtin0, style = stl.func },
     },
     -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
     ["function.macro"] = {
       "TSFuncMacro",
-      { fg = syn.builtin0, style = stl.functions },
+      { fg = syn.builtin0, style = stl.func },
     },
     -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
     ["include"] = {
@@ -133,7 +133,7 @@ function M.fallback(c, config, opts)
     -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
     ["keyword.function"] = {
       "TSKeywordFunction",
-      { fg = syn.keyword, style = stl.functions },
+      { fg = syn.keyword, style = stl.func },
     },
     -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
     ["keyword.operator"] = {
@@ -143,7 +143,7 @@ function M.fallback(c, config, opts)
     -- Keywords like `return` and `yield`.
     ["keyword.return"] = {
       "TSKeywordReturn",
-      { fg = syn.builtin0, style = stl.keywords },
+      { fg = syn.builtin0, style = stl.keyword },
     },
     -- GOTO labels: `label:` in C, and `::label::` in Lua.
     ["label"] = {
@@ -183,7 +183,7 @@ function M.fallback(c, config, opts)
     -- Parameters of a function.
     ["parameter"] = {
       "TSParameter",
-      { fg = syn.param, style = stl.parameters },
+      { fg = syn.param, style = stl.parameter },
     },
     -- References to parameters of a function.
     ["parameter.reference"] = {
@@ -353,7 +353,7 @@ function M.fallback(c, config, opts)
     -- Built-in types: `i32` in Rust.
     ["type.builtin"] = {
       "TSTypeBuiltin",
-      { fg = syn.builtin1, style = stl.types },
+      { fg = syn.builtin1, style = stl.type },
     },
     -- Type but what is qualifier?
     ["type.qualifier"] = {
@@ -368,12 +368,12 @@ function M.fallback(c, config, opts)
     -- Variable names that don't fit into other categories.
     ["variable"] = {
       "TSVariable",
-      { fg = syn.variable, style = stl.variables },
+      { fg = syn.variable, style = stl.variable },
     },
     -- Variable names defined by the language: `this` or `self` in Javascript.
     ["variable.builtin"] = {
       "TSVariableBuiltin",
-      { fg = syn.builtin0, style = stl.variables },
+      { fg = syn.builtin0, style = stl.variable },
     },
     -- Object fields in Rust
     ["field.rust"] = {

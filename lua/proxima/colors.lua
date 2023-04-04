@@ -13,15 +13,15 @@ function M.generate(config)
   local palettes = vim.tbl_deep_extend("keep", config.palettes, {
     dark = color.darken(bg, 48),
     bg0 = color.darken(bg, 16),
-    bg2 = color.lighten(bg, 6),
-    bg3 = color.lighten(bg, 12),
-    bg4 = color.lighten(bg, 18),
+    bg2 = color.lighten(bg, 4),
+    bg3 = color.lighten(bg, 8),
+    bg4 = color.lighten(bg, 12),
     fg0 = color.lighten(fg, 16),
     fg2 = color.darken(fg, 8),
     fg3 = color.darken(fg, 16),
     fg4 = color.darken(fg, 24),
-    comment = color.lighten(bg, 32),
-    black = color.lighten(bg, 24),
+    comment = color.lighten(bg, 24),
+    black = color.lighten(bg, 18),
     white = color.lighten(fg, 24),
   })
 

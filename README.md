@@ -74,16 +74,16 @@ require("proxima").setup {
   palettes = {}, -- customize your own palettes
   specs = {}, -- customize your own specs
   styles = {
-    attributes = "NONE",
-    booleans = "NONE",
-    comments = "NONE",
-    functions = "NONE",
-    keywords = "NONE",
-    numbers = "NONE",
-    parameters = "NONE",
-    strings = "NONE",
-    types = "NONE",
-    variables = "NONE",
+    attribute = "NONE",
+    boolean = "NONE",
+    comment = "NONE",
+    func = "NONE",
+    keyword = "NONE",
+    number = "NONE",
+    parameter = "NONE",
+    string = "NONE",
+    type = "NONE",
+    variable = "NONE",
   },
   -- set invert colors
   inverse = {

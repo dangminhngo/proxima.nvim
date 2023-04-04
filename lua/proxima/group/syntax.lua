@@ -7,24 +7,24 @@ function M.get(c, conf)
   local stl = conf.styles
 
   return {
-    Comment = { fg = syn.comment, style = stl.comments }, -- any comment
+    Comment = { fg = syn.comment, style = stl.comment }, -- any comment
     Constant = { fg = syn.const }, -- (preferred) any constant
-    String = { fg = syn.string, style = stl.strings }, -- a string constant: "this is a string"
+    String = { fg = syn.string, style = stl.string }, -- a string constant: "this is a string"
     Character = { link = "String" }, -- a character constant: 'c', '\n'
-    Number = { fg = syn.number, style = stl.numbers }, -- a number constant: 234, 0xff
+    Number = { fg = syn.number, style = stl.number }, -- a number constant: 234, 0xff
     Float = { link = "Number" }, -- a floating point constant: 2.3e10
-    Boolean = { fg = syn.bool, style = stl.booleans }, -- a boolean constant: TRUE, false
+    Boolean = { fg = syn.bool, style = stl.boolean }, -- a boolean constant: TRUE, false
 
-    Identifier = { fg = syn.ident, style = stl.variables }, -- (preferred) any variable name
-    Function = { fg = syn.func, style = stl.functions }, -- function name (also: methods for classes)
+    Identifier = { fg = syn.ident, style = stl.variable }, -- (preferred) any variable name
+    Function = { fg = syn.func, style = stl.func }, -- function name (also: methods for classes)
 
-    Statement = { fg = syn.keyword, style = stl.keywords }, -- (preferred) any statement
+    Statement = { fg = syn.keyword, style = stl.keyword }, -- (preferred) any statement
     Conditional = { fg = syn.conditional }, -- if, then, else, endif, switch, etc.
     Repeat = { link = "Conditional" }, -- for, do, while, etc.
     Label = { link = "Conditional" }, -- case, default, etc.
 
     Operator = { fg = syn.operator }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = syn.keyword, style = stl.keywords }, -- any other keyword
+    Keyword = { fg = syn.keyword, style = stl.keyword }, -- any other keyword
     Exception = { link = "Keyword" }, -- try, catch, throw
 
     PreProc = { fg = syn.preproc }, -- (preferred) generic Preprocessor
@@ -33,7 +33,7 @@ function M.get(c, conf)
     Macro = { link = "PreProc" }, -- same as Define
     PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = syn.type, style = stl.types }, -- (preferred) int, long, char, etc.
+    Type = { fg = syn.type, style = stl.type }, -- (preferred) int, long, char, etc.
     StorageClass = { link = "Type" }, -- static, register, volatile, etc.
     Structure = { link = "Type" }, -- struct, union, enum, etc.
     Typedef = { link = "Type" }, -- A typedef
