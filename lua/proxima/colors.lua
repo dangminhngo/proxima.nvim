@@ -85,7 +85,7 @@ function M.generate(config)
     },
   }
 
-  vim.pretty_print(palettes)
+  -- vim.pretty_print(palettes)
   -- vim.pretty_print(specs)
 
   return {
