@@ -8,7 +8,7 @@ function M.get(c, config, opts)
 
   return {
     CmpDocumentation = { fg = pal.fg, bg = pal.bg0 },
-    CmpDocumentationBorder = { fg = pal.bg4, bg = pal.bg0 },
+    CmpDocumentationBorder = { fg = pal.bg2, bg = pal.bg0 },
 
     CmpItemAbbr = { fg = pal.fg },
     CmpItemAbbrDeprecated = { fg = syn.dep, style = "strikethrough" },
@@ -18,27 +18,21 @@ function M.get(c, config, opts)
     CmpItemKindDefault = { fg = pal.fg3 },
     CmpItemMenu = { link = "Comment" },
 
-    CmpItemKindKeyword = { link = "Identifier" },
-
     CmpItemKindVariable = { link = "TSVariable" },
     CmpItemKindConstant = { link = "TSConstant" },
+    CmpItemKindKeyword = { link = "Keyword" },
     CmpItemKindReference = { link = "Keyword" },
     CmpItemKindValue = { link = "Keyword" },
-
     CmpItemKindFunction = { link = "Function" },
     CmpItemKindMethod = { link = "Function" },
     CmpItemKindConstructor = { link = "Function" },
-
-    CmpItemKindInterface = { link = "Constant" },
     CmpItemKindEvent = { link = "Constant" },
-    CmpItemKindEnum = { link = "Constant" },
     CmpItemKindUnit = { link = "Constant" },
-
+    CmpItemKindInterface = { link = "Type" },
     CmpItemKindClass = { link = "Type" },
     CmpItemKindStruct = { link = "Type" },
-
+    CmpItemKindEnum = { link = "Type" },
     CmpItemKindModule = { link = "TSNamespace" },
-
     CmpItemKindProperty = { link = "TSProperty" },
     CmpItemKindField = { link = "TSField" },
     CmpItemKindTypeParameter = { link = "TSField" },

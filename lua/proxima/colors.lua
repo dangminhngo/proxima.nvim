@@ -17,9 +17,9 @@ function M.generate(config)
     bg3 = color.lighten(bg, 8),
     bg4 = color.lighten(bg, 12),
     fg0 = color.lighten(fg, 56),
-    fg2 = color.darken(fg, 16),
-    fg3 = color.darken(fg, 32),
-    fg4 = color.darken(fg, 48),
+    fg2 = color.darken(fg, 12),
+    fg3 = color.darken(fg, 24),
+    fg4 = color.darken(fg, 36),
     comment = color.lighten(bg, 24),
     black = color.lighten(bg, 18),
     white = color.lighten(fg, 64),
@@ -85,7 +85,7 @@ function M.generate(config)
     },
   }
 
-  -- vim.pretty_print(palettes)
+  vim.pretty_print(palettes)
   -- vim.pretty_print(specs)
 
   return {
