@@ -20,14 +20,14 @@ function M.get(c, config, opts)
     NvimTreeSymlink = { fg = pal.magenta },
     NvimTreeSpecialFile = { fg = pal.blue },
     NvimTreeImageFile = { fg = pal.white },
-    NvimTreeOpenedFile = { fg = pal.white }, -- TODO: not working
+    NvimTreeOpenedFile = { fg = pal.white },
 
+    NvimTreeGitNew = { fg = git.added },
     NvimTreeGitDeleted = { fg = git.removed },
     NvimTreeGitDirty = { fg = git.changed },
     NvimTreeGitMerge = { fg = git.conflict },
-    NvimTreeGitNew = { fg = git.added },
-    NvimTreeGitRenamed = { link = "NvimTreeGitDeleted" },
-    NvimTreeGitStaged = { link = "NvimTreeGitStaged" },
+    NvimTreeGitRenamed = { fg = pal.cyan },
+    NvimTreeGitStaged = { fg = pal.accent },
   }
 end
 

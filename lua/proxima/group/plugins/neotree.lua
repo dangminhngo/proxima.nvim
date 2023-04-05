@@ -28,8 +28,8 @@ function M.get(c, config, opts)
     NeoTreeGitDeleted = { fg = git.removed },
     NeoTreeGitIgnored = { fg = git.ignored },
     NeoTreeGitModified = { fg = pal.cyan },
-    NeoTreeGitUnstaged = { fg = pal.comment },
-    NeoTreeGitUntracked = { fg = pal.fg3 },
+    NeoTreeGitUnstaged = { fg = pal.teal },
+    NeoTreeGitUntracked = { fg = pal.magenta },
     NeoTreeGitStaged = { fg = pal.accent },
   }
 end
