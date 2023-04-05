@@ -1,4 +1,4 @@
-local config = require("proxima.config")
+local config = require("proxima.config").options
 local palette = require("proxima.palette")
 
 local c = palette.load_colors(config)

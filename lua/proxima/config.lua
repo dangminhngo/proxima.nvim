@@ -4,14 +4,14 @@ local defaults = {
   accent = "green",
   palettes = {
     fg = "#d4cbb8",
-    bg = "#293235",
+    bg = "#262f32",
     red = "#e67e80",
     green = "#a4c76f",
     yellow = "#d1cc66",
-    blue = "#5fbde8",
+    blue = "#678dc9",
     magenta = "#a382d1",
-    cyan = "#73c9c5",
-    teal = "#58d699",
+    cyan = "#76bfc4",
+    teal = "#6fc79e",
     orange = "#de995d",
     pink = "#d971c4",
   },
@@ -108,10 +108,12 @@ local defaults = {
   },
 }
 
-M.config = {}
+M.options = {}
 
 M.setup = function(options)
-  M.config = vim.tbl_deep_extend("force", {}, defaults, options or {})
+  M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
 end
+
+M.setup()
 
 return M
