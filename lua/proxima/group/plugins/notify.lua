@@ -24,12 +24,6 @@ function M.get(c, config, opts)
     NotifyINFOIcon = { link = "NotifyINFOTitle" },
     NotifyDEBUGIcon = { link = "NotifyDEBUGTitle" },
     NotifyTRACEIcon = { link = "NotifyTRACETitle" },
-
-    NotifyERRORBody = { fg = pal.fg, bg = pal.dark },
-    NotifyWARNBody = { fg = pal.fg, bg = pal.dark },
-    NotifyINFOBody = { fg = pal.fg, bg = pal.dark },
-    NotifyDEBUGBody = { fg = pal.fg, bg = pal.dark },
-    NotifyTRACEBody = { fg = pal.fg, bg = pal.dark },
   }
 end
 
