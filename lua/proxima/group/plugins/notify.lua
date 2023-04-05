@@ -13,11 +13,11 @@ function M.get(c, config, opts)
     NotifyDEBUGBorder = { fg = diag.hint },
     NotifyTRACEBorder = { fg = pal.bg4 },
 
-    NotifyERRORTitle = { fg = pal.bg, bg = diag.error },
-    NotifyWARNTitle = { fg = pal.bg, bg = diag.warn },
-    NotifyINFOTitle = { fg = pal.bg, bg = diag.info },
-    NotifyDEBUGTitle = { fg = pal.bg, bg = diag.hint },
-    NotifyTRACETitle = { fg = pal.bg, bg = syn.comment },
+    NotifyERRORTitle = { fg = diag.error },
+    NotifyWARNTitle = { fg = diag.warn },
+    NotifyINFOTitle = { fg = diag.info },
+    NotifyDEBUGTitle = { fg = diag.hint },
+    NotifyTRACETitle = { fg = syn.comment },
 
     NotifyERRORIcon = { link = "NotifyERRORTitle" },
     NotifyWARNIcon = { link = "NotifyWARNTitle" },
