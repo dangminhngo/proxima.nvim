@@ -9,7 +9,7 @@ function M.get(c, config, opts)
     WhichKeyDesc = { link = "Keyword" },
     WhichKeySeperator = { link = "Comment" },
     WhichKeySeparator = { link = "Comment" },
-    WhichKeyFloat = { bg = c.palettes.bg0 },
+    WhichKeyFloat = { bg = c.palette.bg0 },
     WhichKeyValue = { link = "Comment" },
   }
 end

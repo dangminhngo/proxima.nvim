@@ -21,7 +21,7 @@ end
 -- @param c
 -- @param conf
 function M.set_terminal_colors(c)
-  local pal = c.palettes
+  local pal = c.palette
 
   local colors = {
     pal.black,

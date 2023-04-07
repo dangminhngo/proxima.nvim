@@ -1,7 +1,7 @@
 local M = {}
 
 function M.get(c, config, opts)
-  local pal = c.palettes
+  local pal = c.palette
   local diag = c.specs.diag
 
   return {

@@ -4,7 +4,7 @@ local M = {}
 
 function M.get(c, config, opts)
   return {
-    TelescopeBorder = { fg = c.palettes.bg4 },
+    TelescopeBorder = { fg = c.palette.bg4 },
     TelescopeSelectionCaret = { fg = c.specs.diag.hint },
     TelescopeSelection = { link = "CursorLine" },
     TelescopeMatching = { link = "Search" },

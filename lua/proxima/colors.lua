@@ -7,10 +7,10 @@ local M = {}
 -- @param accent string
 -- @param config table
 function M.generate(config)
-  local bg = config.palettes.bg
-  local fg = config.palettes.fg
+  local bg = config.palette.bg
+  local fg = config.palette.fg
 
-  local palettes = vim.tbl_deep_extend("keep", config.palettes, {
+  local palette = vim.tbl_deep_extend("keep", config.palette, {
     dark = color.darken(bg, 48),
     bg0 = color.darken(bg, 16),
     bg2 = color.lighten(bg, 4),
@@ -25,16 +25,16 @@ function M.generate(config)
     white = color.lighten(fg, 64),
   })
 
-  palettes.accent = palettes[config.accent]
-  palettes.visual = color.lighten(palettes.accent, 64)
-  palettes.search = color.darken(palettes.accent, 32)
+  palette.accent = palette[config.accent]
+  palette.visual = color.lighten(palette.accent, 64)
+  palette.search = color.darken(palette.accent, 32)
 
   local syn = config.specs.syntax
   local diag = config.specs.diag
   local git = config.specs.git
   local diff = config.specs.diff
 
-  local g = util.get_color(palettes)
+  local g = util.get_color(palette)
   local specs = {
     syntax = {
       attr = g(syn.attr), -- HTML tag attribues
@@ -85,11 +85,11 @@ function M.generate(config)
     },
   }
 
-  -- vim.pretty_print(palettes)
+  -- vim.pretty_print(palette)
   -- vim.pretty_print(specs)
 
   return {
-    palettes = palettes,
+    palette = palette,
     specs = specs,
   }
 end

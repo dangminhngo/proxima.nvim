@@ -10,7 +10,7 @@ function M.get(c, config, opts)
 end
 
 function M.fallback(c, config, opts)
-  local pal = c.palettes
+  local pal = c.palette
   local syn = c.specs.syntax
   local stl = config.styles
 

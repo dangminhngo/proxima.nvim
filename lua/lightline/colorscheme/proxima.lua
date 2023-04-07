@@ -2,7 +2,7 @@ local config = require("proxima.config").options
 local palette = require("proxima.palette")
 
 local c = palette.load_colors(config)
-local pal = c.palettes
+local pal = c.palette
 
 return {
   normal = {

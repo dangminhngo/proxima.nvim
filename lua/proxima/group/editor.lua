@@ -5,7 +5,7 @@ function M.get(c, config)
   local inv = config.inverse
   local alt = config.alt
 
-  local pal = c.palettes
+  local pal = c.palette
   local syn = c.specs.syntax
   local diag = c.specs.diag
   local git = c.specs.git

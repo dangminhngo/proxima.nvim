@@ -1,20 +1,37 @@
 local M = {}
 
-local defaults = {
-  accent = "green",
-  palettes = {
+local palettes = {
+  cool = {
+    fg = "#ccd5d9",
+    bg = "#262f32",
+    red = "#de6a6d",
+    green = "#a4c76f",
+    yellow = "#e3dd5f",
+    blue = "#6090db",
+    magenta = "#a57cde",
+    cyan = "#66c5cc",
+    teal = "#4dd6a4",
+    orange = "#e8964f",
+    pink = "#db70c6",
+  },
+  warm = {
     fg = "#d4cbb8",
     bg = "#262f32",
     red = "#e67e80",
     green = "#a4c76f",
     yellow = "#d1cc66",
     blue = "#678dc9",
-    magenta = "#a382d1",
+    magenta = "#a183cc",
     cyan = "#76bfc4",
-    teal = "#6fc79e",
-    orange = "#de995d",
-    pink = "#d971c4",
+    teal = "#6fc7a4",
+    orange = "#d69760",
+    pink = "#c975b9",
   },
+}
+
+M.defaults = {
+  style = "warm",
+  accent = "green",
   specs = {
     syntax = {
       attr = "yellow", -- HTML tag attribues
@@ -111,7 +128,13 @@ local defaults = {
 M.options = {}
 
 M.setup = function(options)
-  M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
+  M.options = vim.tbl_deep_extend(
+    "force",
+    {},
+    M.defaults,
+    options or {}
+  )
+  M.options.palette = palettes[M.options.style]
 end
 
 M.setup()

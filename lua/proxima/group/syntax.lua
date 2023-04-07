@@ -3,7 +3,7 @@ local M = {}
 function M.get(c, conf)
   local syn = c.specs.syntax
   local diag = c.specs.diag
-  local pal = c.palettes
+  local pal = c.palette
   local stl = conf.styles
 
   return {

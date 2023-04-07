@@ -71,7 +71,7 @@ require("proxima").setup {
   transparent = false, -- if true, background is transparent
   terminal_colors = true, -- if true, set terminal colors
   -- set style: "NONE", "italic", "bold", "underline", "undercurl"
-  palettes = {}, -- customize your own palettes
+  palette = {}, -- customize your own palette
   specs = {}, -- customize your own specs
   styles = {
     attribute = "NONE",
