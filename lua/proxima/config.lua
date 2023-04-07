@@ -85,55 +85,67 @@ M.defaults = {
   transparent = false,
   terminal_colors = true,
   styles = {
-    attribute = "NONE",
-    boolean = "NONE",
-    comment = "NONE",
-    func = "NONE",
-    keyword = "NONE",
-    number = "NONE",
-    parameter = "NONE",
-    string = "NONE",
-    type = "NONE",
-    variable = "NONE",
+    attributes = { italic = true },
+    booleans = { italic = true },
+    comments = { italic = true },
+    functions = {},
+    keywords = {},
+    numbers = {},
+    parameters = {},
+    strings = {},
+    types = {},
+    variables = {},
   },
-  inverse = {
+  reverse = {
     match_paren = false,
     visual = false,
     search = false,
   },
-  plugins = {
-    alpha = true,
-    bufferline = true,
-    cmp = true,
-    dashboard = true,
+  core = {
+    editor = true,
+    syntax = true,
     diagnostic = {
-      enable = true,
-      background = true,
+      enabled = true,
+      background = false,
     },
-    gitsigns = true,
-    illuminate = true,
-    lspsaga = true,
-    lsp_signature = true,
-    notify = true,
-    neotree = true,
-    nvimtree = true,
-    scrollbar = true,
-    telescope = true,
+    lsp = true,
     treesitter = true,
-    tsrainbow = true,
-    whichkey = true,
+  },
+  plugins = {
+    alpha = false,
+    barbar = false,
+    bufferline = false,
+    dashboard = false,
+    diff = false,
+    gitsigns = false,
+    hop = false,
+    indent_blankline = false,
+    lazy = false,
+    leap = false,
+    lspsaga = false,
+    mini = false,
+    neo_tree = false,
+    nvim_cmp = false,
+    nvim_navic = false,
+    nvim_notify = false,
+    nvim_tree = false,
+    nvim_ts_rainbow = false,
+    nvim_ts_rainbow2 = false,
+    nvim_scrollbar = false,
+    telescope = false,
+    trouble = false,
+    vim_gitgutter = false,
+    vim_illuminate = false,
+    vim_sneak = false,
+    which_key = false,
+    yanky = false,
   },
 }
 
 M.options = {}
 
 M.setup = function(options)
-  M.options = vim.tbl_deep_extend(
-    "force",
-    {},
-    M.defaults,
-    options or {}
-  )
+  M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
   M.options.palette = palettes[M.options.style]
 end
 

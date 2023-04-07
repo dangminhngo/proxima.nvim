@@ -13,7 +13,7 @@ return {
   modified = { fg = diag.warn },
 
   dirname = { fg = pal.bg4 },
-  basename = { fg = pal.fg3, style = "bold" },
+  basename = { fg = pal.fg3, bold = true },
   context = { fg = pal.fg3 },
 
   context_file = { fg = c.fg3 },
