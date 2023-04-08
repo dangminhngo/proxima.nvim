@@ -15,7 +15,7 @@ local palettes = {
     pink = "#db70c6",
   },
   warm = {
-    fg = "#d4cbb8",
+    fg = "#dbceb3",
     bg = "#262f32",
     red = "#e67e80",
     green = "#a4c76f",

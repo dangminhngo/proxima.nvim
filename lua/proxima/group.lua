@@ -179,13 +179,13 @@ M.groups = function(c, config)
       DiagnosticSignHint = { link = "DiagnosticHint" },
 
       DiagnosticVirtualTextError = core_opts.diagnostic.background and { fg = pal.bg, bg = diag.error }
-        or { fg = diag.error, bg = color.darken(diag.error, 72) },
+        or { fg = diag.error, bg = color.darken(diag.error, 80) },
       DiagnosticVirtualTextWarn = core_opts.diagnostic.background and { fg = pal.bg, bg = diag.warn }
-        or { fg = diag.warn, bg = color.darken(diag.warn, 72) },
+        or { fg = diag.warn, bg = color.darken(diag.warn, 80) },
       DiagnosticVirtualTextInfo = core_opts.diagnostic.background and { fg = pal.bg, bg = diag.info }
-        or { fg = diag.info, bg = color.darken(diag.info, 72) },
+        or { fg = diag.info, bg = color.darken(diag.info, 80) },
       DiagnosticVirtualTextHint = core_opts.diagnostic.background and { fg = pal.bg, bg = diag.hint }
-        or { fg = diag.hint, bg = color.darken(diag.hint, 72) },
+        or { fg = diag.hint, bg = color.darken(diag.hint, 80) },
 
       DiagnosticUnderlineError = { undercurl = true, sp = diag.error },
       DiagnosticUnderlineWarn = { undercurl = true, sp = diag.warn },
