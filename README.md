@@ -1,4 +1,4 @@
-<h1 align="center">Proxima.nvim</h1>
+<h1 align="center">proxima.nvim</h1>
 
 <br>
 
@@ -69,6 +69,8 @@
   <p>Preview</p>
   <img src="https://github.com/dangminhngo/proxima.nvim/blob/main/media/default.png" />
 </div>
+
+<br>
 
 - Midnight (cool)
 
