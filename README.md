@@ -1,8 +1,12 @@
 <h1 align="center">Proxima.nvim</h1>
 
+<br>
+
 <div align="center">
   <img src="https://github.com/dangminhngo/proxima.nvim/blob/main/media/logo.png" width="128px" />
 </div>
+
+<br>
 
 <div align="center">
     <a href="https://github.com/dangminhngo/proxima.nvim/releases/latest">
@@ -28,11 +32,11 @@
     </a>
 </div>
 
+<br>
+
 <p align="center">
   Proxima colorscheme for NeoVim 0.8+ that supports LSP, Treesitter and other popular plugins.
 </p>
-
-
 
 ## Table of contents
 
@@ -52,26 +56,34 @@
 - Default (warm)
 
 <div align="center">
+  <p>Palette</p>
   <img 
     src="https://github.com/dangminhngo/proxima.nvim/blob/main/media/default-palette.png"
     alt="Default Palette"
   />
 </div>
 
+<br>
+
 <div align="center">
+  <p>Preview</p>
   <img src="https://github.com/dangminhngo/proxima.nvim/blob/main/media/default.png" />
 </div>
 
 - Midnight (cool)
 
 <div align="center">
+  <p>Palette</p>
   <img 
     src="https://github.com/dangminhngo/proxima.nvim/blob/main/media/midnight-palette.png"
     alt="Midnight Palette"
   />
 </div>
 
+<br>
+
 <div align="center">
+  <p>Preview</p>
   <img src="https://github.com/dangminhngo/proxima.nvim/blob/main/media/midnight.png" />
 </div>
 
