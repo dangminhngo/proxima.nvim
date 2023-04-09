@@ -1,20 +1,7 @@
 local M = {}
 
 local palettes = {
-  cool = {
-    fg = "#ccd5d9",
-    bg = "#262f32",
-    red = "#de6a6d",
-    green = "#a4c76f",
-    yellow = "#e3dd5f",
-    blue = "#6090db",
-    magenta = "#a57cde",
-    cyan = "#66c5cc",
-    teal = "#4dd6a4",
-    orange = "#e8964f",
-    pink = "#db70c6",
-  },
-  warm = {
+  default = {
     fg = "#dbceb3",
     bg = "#262f32",
     red = "#e67e80",
@@ -27,11 +14,44 @@ local palettes = {
     orange = "#d69760",
     pink = "#c975b9",
   },
+  midnight = {
+    fg = "#ccd5d9",
+    bg = "#262f32",
+    red = "#de6a6d",
+    green = "#a4c76f",
+    yellow = "#e3dd5f",
+    blue = "#6090db",
+    magenta = "#a57cde",
+    cyan = "#66c5cc",
+    teal = "#4dd6a4",
+    orange = "#e8964f",
+    pink = "#db70c6",
+  },
 }
 
 M.defaults = {
-  style = "warm",
+  style = "default",
   accent = "green",
+  transparent = false,
+  terminal_colors = true,
+  styles = {
+    attributes = { italic = true },
+    booleans = { italic = true },
+    comments = { italic = true },
+    functions = {},
+    keywords = {},
+    numbers = {},
+    parameters = {},
+    strings = {},
+    types = {},
+    variables = {},
+  },
+  reverse = {
+    match_paren = false,
+    visual = false,
+    search = false,
+  },
+  palette = {},
   specs = {
     syntax = {
       attr = "yellow", -- HTML tag attribues
@@ -81,26 +101,7 @@ M.defaults = {
       text = "cyan",
     },
   },
-  group = {},
-  transparent = false,
-  terminal_colors = true,
-  styles = {
-    attributes = { italic = true },
-    booleans = { italic = true },
-    comments = { italic = true },
-    functions = {},
-    keywords = {},
-    numbers = {},
-    parameters = {},
-    strings = {},
-    types = {},
-    variables = {},
-  },
-  reverse = {
-    match_paren = false,
-    visual = false,
-    search = false,
-  },
+  groups = {},
   core = {
     editor = true,
     syntax = true,

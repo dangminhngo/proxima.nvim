@@ -67,55 +67,73 @@ This is an example proxima setup with default values
 
 ```lua
 require("proxima").setup {
-  style = "warm",
-  accent = "blue", -- values: "orange", "teal", "white", "cyan", "green", "magenta", "purple", "red", "blue", "yellow"
+  style = "default",
+  accent = "green", -- values: "orange", "teal", "white", "cyan", "green", "magenta", "purple", "red", "blue", "yellow"
   transparent = false, -- if true, background is transparent
   terminal_colors = true, -- if true, set terminal colors
   -- set style: "NONE", "italic", "bold", "underline", "undercurl"
-  palette = {}, -- customize your own palette
-  specs = {}, -- customize your own specs
+
   styles = {
-    attribute = "NONE",
-    boolean = "NONE",
-    comment = "NONE",
-    func = "NONE",
-    keyword = "NONE",
-    number = "NONE",
-    parameter = "NONE",
-    string = "NONE",
-    type = "NONE",
-    variable = "NONE",
+    attributes = { italic = true },
+    booleans = { italic = true },
+    comments = { italic = true },
+    functions = {},
+    keywords = {},
+    numbers = {},
+    parameters = {},
+    strings = {},
+    types = {},
+    variables = {},
   },
   -- set invert colors
-  inverse = {
+  reverse = {
     match_paren = false,
     visual = false,
     search = false,
   },
+  palette = {}, -- customize your own palette
+  specs = {}, -- customize your own specs
+  groups = {}, -- customize your own groups
+  -- core
+  core = {
+    editor = true,
+    syntax = true,
+    diagnostic = {
+      enabled = true,
+      background = false,
+    },
+    lsp = true,
+    treesitter = true,
+  },
   -- enable plugin highlightings
   plugins = {
-    alpha = true,
-    bufferline = true,
-    cmp = true,
-    dashboard = true,
-    diagnostic = {
-      enable = true,
-      background = true,
-    },
-    diff = true,
-    gitsigns = true,
-    illuminate = true,
-    lspsaga = true,
-    lsp_signature = true,
-    notify = true,
-    neotree = true,
-    nvimtree = true,
-    scrollbar = true,
-    telescope = true,
-    treesitter = true,
-    trouble = true,
-    tsrainbow = true,
-    whichkey = true,
+    alpha = false,
+    barbar = false,
+    bufferline = false,
+    dashboard = false,
+    diff = false,
+    gitsigns = false,
+    hop = false,
+    indent_blankline = false,
+    lazy = false,
+    leap = false,
+    lspsaga = false,
+    mini = false,
+    neo_tree = false,
+    nvim_cmp = false,
+    nvim_navic = false,
+    nvim_notify = false,
+    nvim_tree = false,
+    nvim_ts_rainbow = false,
+    nvim_ts_rainbow2 = false,
+    nvim_scrollbar = false,
+    telescope = false,
+    trouble = false,
+    vim_gitgutter = false,
+    vim_illuminate = false,
+    vim_sneak = false,
+    which_key = false,
+    yanky = false,
   },
 }
 ```
