@@ -12,7 +12,7 @@ function M.generate(config)
 
   local palette = vim.tbl_deep_extend("keep", config.palette, {
     none = "NONE",
-    dark = color.darken(bg, 48),
+    dark = color.darken(bg, 32),
     bg0 = color.darken(bg, 16),
     bg2 = color.lighten(bg, 4),
     bg3 = color.lighten(bg, 8),
