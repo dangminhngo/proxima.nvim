@@ -2,7 +2,7 @@ local M = {}
 
 local palettes = {
   default = {
-    fg = "#bbc8cb",
+    fg = "#b2b8c3",
     bg = "#262a31",
     red = "#e36f71",
     green = "#a4c76f",
