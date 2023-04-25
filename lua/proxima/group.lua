@@ -41,7 +41,7 @@ M.groups = function(c, config)
       SignColumn = { fg = pal.fg3 }, -- column where |signs| are displayed
       SignColumnSB = { link = "SignColumn" }, -- column where |signs| are displayed
       Substitute = { fg = pal.bg, bg = diag.error }, -- |:substitute| replacement text highlighting
-      LineNr = { fg = pal.bg4 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+      LineNr = { fg = pal.black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
       CursorLineNr = { fg = pal.accent, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
       MatchParen = { fg = diag.warn, bold = true, reverse = reverse.match_paren }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
       ModeMsg = { fg = diag.warn, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -289,6 +289,27 @@ M.groups = function(c, config)
       ["@field.rust"] = { fg = pal.fg2 }, -- Object fields in Rust
       ["@tag.javascript"] = { fg = syn.builtin0 }, -- JSX tag opening/closing element
       ["@tag.typescript"] = { fg = syn.builtin0 }, -- TSX tag opening/closing element
+
+      -- LSP Semantic Token Groups
+      ["@lsp.type.comment"] = { link = "@comment" },
+      ["@lsp.type.enum"] = { link = "@type" },
+      ["@lsp.type.enumMember"] = { link = "@constant" },
+      ["@lsp.type.interface"] = { link = "@type" },
+      ["@lsp.type.keyword"] = { link = "@keyword" },
+      ["@lsp.type.namespace"] = { link = "@namespace" },
+      ["@lsp.type.parameter"] = { link = "@parameter" },
+      ["@lsp.type.property"] = { link = "@property" },
+      ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
+      ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+      ["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
+      ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
+      ["@lsp.typemod.operator.injected"] = { link = "@operator" },
+      ["@lsp.typemod.string.injected"] = { link = "@string" },
+      ["@lsp.typemod.type.defaultLibrary"] = { fg = syn.builtin1 },
+      ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+      ["@lsp.typemod.variable.injected"] = { link = "@variable" },
+      -- NOTE: maybe add these with distinct highlights?
+      -- ["@lsp.typemod.variable.globalScope"] (global variables)
     },
     -------------------------------------------------------------------------------------------------------------------
     -------------------------------------------------------------------------------------------------------------------
