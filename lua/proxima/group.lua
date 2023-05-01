@@ -525,7 +525,7 @@ M.groups = function(c, config)
       -----------------------------------------------------------------------------------------------------------------
       -- https://github.com/nvim-neo-tree/neo-tree.lua
       neo_tree = {
-        NeoTreeExpander = { fg = pal.bg4 },
+        NeoTreeExpander = { fg = pal.black },
         NeoTreeNormal = { fg = pal.fg2, bg = config.transparent and "NONE" or pal.bg0 },
         NeoTreeNormalNC = { fg = pal.fg2, bg = config.transparent and "NONE" or pal.bg0 },
         NeoTreeVertSplit = { link = "VertSplit" },

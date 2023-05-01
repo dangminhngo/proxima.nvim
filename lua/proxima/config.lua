@@ -88,11 +88,11 @@ M.defaults = {
       hint = "green",
     },
     git = {
-      added = "cyan",
+      added = "green",
       removed = "red",
       changed = "yellow",
       conflict = "orange",
-      ignored = "comment",
+      ignored = "pink",
     },
     diff = {
       add = "green",
