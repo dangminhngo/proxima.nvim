@@ -477,7 +477,7 @@ M.groups = function(c, config)
         MiniCursorword = { bg = pal.bg3 },
         MiniCursorwordCurrent = { bg = pal.bg4 },
 
-        MiniIndentscopeSymbol = { fg = pal.blue },
+        MiniIndentscopeSymbol = { fg = pal.bg3 },
         MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
 
         MiniJump = { bg = pal.search, fg = pal.fg },
@@ -485,8 +485,8 @@ M.groups = function(c, config)
         MiniJump2dSpot = { fg = pal.search, bold = true, nocombine = true },
 
         MiniStarterCurrent = { nocombine = true },
-        MiniStarterFooter = { fg = pal.yellow, italic = true },
-        MiniStarterHeader = { fg = pal.blue },
+        MiniStarterFooter = { fg = pal.magenta, italic = true },
+        MiniStarterHeader = { fg = pal.accent },
         MiniStarterInactive = { fg = syn.comment, style = stl.comments },
         MiniStarterItem = { fg = pal.fg, bg = transparent and pal.none or pal.bg },
         MiniStarterItemBullet = { fg = pal.bg4 },
