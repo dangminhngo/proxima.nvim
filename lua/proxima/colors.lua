@@ -22,7 +22,7 @@ function M.generate(config)
     fg3 = color.darken(fg, 32),
     fg4 = color.darken(fg, 48),
     comment = color.lighten(bg, 32),
-    black = color.lighten(bg, 18),
+    black = color.lighten(bg, 16),
     white = color.lighten(fg, 64),
   })
 

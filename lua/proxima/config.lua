@@ -2,9 +2,9 @@ local M = {}
 
 local palettes = {
   default = {
-    fg = "#b3b8d1",
-    bg = "#1d2030",
-    red = "#f57c7e",
+    fg = "#abc2d0",
+    bg = "#10181d",
+    red = "#f15a5d",
     green = "#a4c76f",
     yellow = "#eace60",
     blue = "#619af5",
@@ -16,7 +16,7 @@ local palettes = {
   },
   midnight = {
     fg = "#dbceb3",
-    bg = "#242d2f",
+    bg = "#10181d",
     red = "#e67e80",
     green = "#a4c76f",
     yellow = "#d1cc66",
@@ -31,7 +31,7 @@ local palettes = {
 
 M.defaults = {
   style = "default",
-  accent = "blue",
+  accent = "green",
   transparent = false,
   terminal_colors = true,
   styles = {
