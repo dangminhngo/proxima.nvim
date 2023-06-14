@@ -7,7 +7,7 @@ local pal = c.palette
 local function mode(color)
   return {
     a = { bg = color, fg = pal.dark, gui = "bold" },
-    b = { bg = pal.fg, fg = pal.dark },
+    b = { bg = pal.dark, fg = pal.fg2 },
     c = { bg = pal.dark, fg = pal.black },
   }
 end
